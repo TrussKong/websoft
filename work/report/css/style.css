@@ -17,3 +17,11 @@ body {
     width: 50%;
     border: darksalmon;
 }
+.navvv{
+    text-align: center;
+    font-size: 24;
+    padding: 8px;
+    margin: 8px;
+    display: inline block;
+    border: 4px dotted yellow;
+}
