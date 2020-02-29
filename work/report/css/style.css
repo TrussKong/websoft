@@ -1,7 +1,7 @@
 /*
  * Comments are written as C++ style. 
  */
-html {
+ html {
     overflow-y: scroll;
 }
 
@@ -23,5 +23,20 @@ body {
     padding: 8px;
     margin: 8px;
     display: block;
-    border: 4px dotted yellow;
+    border: 4px dotted yellow; 
 }
+
+.duck{
+    width: 128px;
+    height: 190px;
+    background-image: url(../img/pngguru.com.png );
+    background-size:  128px;
+    position: absolute;
+
+}
+/* div.duck{
+    width: 50px;
+height:50px;
+ background-color:red;
+position:fixed;
+} */
