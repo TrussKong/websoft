@@ -66,11 +66,20 @@ th{
 }
 
 .buttonDisplay{
+box-shadow:  8px 8px yellowgreen;
 font-size: 18px;
 padding: 12px;
 border-radius: 50pc;
 background-color: white;
 border: yellow solid 6px;
+cursor: pointer;
+
 }
-
-
+.buttonDisplay:hover{
+    background-color: yellowgreen;
+}
+.buttonDisplay:active{
+    background-color: aliceblue;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
