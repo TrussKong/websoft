@@ -51,10 +51,26 @@ h2{
 table{
     border: yellow solid 3px;
 }
+thead{
+    background-color: yellow;
+    font-size: 24px;
+    size: 16px;
+}
+tr{
+font-size: 24px;
+}
 
-/* div.duck{
-    width: 50px;
-height:50px;
- background-color:red;
-position:fixed;
-} */
+th{
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.buttonDisplay{
+font-size: 18px;
+padding: 12px;
+border-radius: 50pc;
+background-color: white;
+border: yellow solid 6px;
+}
+
+
