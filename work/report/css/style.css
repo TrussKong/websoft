@@ -48,6 +48,9 @@ footer{
 h2{
     color: yellow;
 }
+table{
+    border: yellow solid 3px;
+}
 
 /* div.duck{
     width: 50px;

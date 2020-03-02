@@ -4,7 +4,11 @@
         <meta charset="utf-8">
         <title>All schools in a swedish municpality</title>
         <link rel="stylesheet" href="css/style.css">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.36/css/bootstrap.min.css"> -->
         <link rel="icon" href="favicon.ico">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     </head>
     <body>
         <header>
@@ -16,7 +20,40 @@
             </nav class="navvv">
         </header>
 
+        <h1>Table of Schools</h1>
+
+
+        <table class="school_table2" id="school_table" border="2px">
+            <tr>
+                <th>Skolenhetskod</th>
+                <th>SkolenhetsName</th>
+                <th>KommunKod</th>
+                <th>PeOrgNr</th>
+            </tr>
+        </table>
+
+        <div id="fetch" class="fetch"></div>
+
         <div id="duck" class="duck"></div>
         <script type="text/javascript" src="js/duck.js" ></script>
+        <script type="text/javascript" src="js/fetch.js" ></script>
     </body>
 </html>
+
+<script>
+$(document).ready(function(){
+    $.getJSON("data/1081.json", function(data){
+        var school_data = '';
+        $.each(data, function (key, value) {
+            school_data += '<tr>';
+                school_data += '<td>' + value.Skolenhetskod + '</td>';
+                school_data += '<td>' + value.Skolenhetsnamn + '</td>';
+                school_data += '<td>' + value.Kommunkod + '</td>';
+                school_data += '<td>' + value.PeOrgNr + '</td>';
+            school_data += '</tr>';
+        });
+        $('#school_table').append(school_data);
+    });
+});
+ 
+</script>
