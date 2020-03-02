@@ -43,6 +43,7 @@ body {
     border: yellow solid 5px ;
     border-radius: 50px;
     background-color: yellow;
+    box-shadow: yellowgreen 16px 16px;
 }
 footer{
     border-color: yellow solid 5px;
@@ -50,9 +51,14 @@ footer{
 }
 h2{
     color: yellow;
+    border: solid 2px;
+    box-shadow: yellowgreen 8px 8px;
+    text-shadow: yellowgreen 4px 4px;
+
 }
 table{
     border: yellow solid 3px;
+    box-shadow: yellowgreen 8px 8px;
 }
 thead{
     background-color: yellow;
