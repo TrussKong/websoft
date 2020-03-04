@@ -1,0 +1,102 @@
+/*
+ * Comments are written as C++ style. 
+ */
+ html {
+    overflow-y: scroll;
+}
+
+body {
+    margin: 8px auto;
+    background: rgb(198, 156, 233);
+    width: 700px;
+}
+.centerImg{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: darksalmon;
+}
+.navvv{
+    text-align: center;
+    text-decoration-color: yellow;
+    font-size: 36px;
+    padding: 8px;
+    margin: 8px;
+    display: block;
+    border: 4px solid yellow ; 
+    border-radius: 50px;
+}
+.navvv:hover{
+    background-color: greenyellow;
+}
+
+.duck{
+    width: 128px;
+    height: 190px;
+    background-image: url(../img/pngguru.com.png );
+    background-size:  128px;
+    position: absolute;
+
+}
+.imageMe{
+    border: yellow solid 5px ;
+    border-radius: 50px;
+    background-color: yellow;
+    box-shadow: yellowgreen 16px 16px;
+}
+footer{
+    border-color: yellow solid 5px;
+    border-radius: 30px;
+}
+h2{
+    color: yellow;
+    border: solid 2px;
+    box-shadow: yellowgreen 8px 8px;
+    text-shadow: yellowgreen 4px 4px;
+    background-color: yellowgreen;
+
+}
+table{
+    border: yellow solid 3px;
+    box-shadow: yellowgreen 8px 8px;
+}
+thead{
+    background-color: yellow;
+    font-size: 24px;
+    size: 16px;
+}
+tr{
+font-size: 24px;
+}
+
+th{
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.buttonDisplay{
+box-shadow:  8px 8px yellowgreen;
+font-size: 18px;
+padding: 12px;
+border-radius: 50pc;
+background-color: white;
+border: yellow solid 6px;
+cursor: pointer;
+
+}
+.buttonDisplay:hover{
+    background-color: yellowgreen;
+}
+.buttonDisplay:active{
+    background-color: aliceblue;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+a:hover{
+    color: yellow;
+}
+.reportPara{
+    border: yellow solid 2px;
+
+}
