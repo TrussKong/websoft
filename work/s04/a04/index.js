@@ -5,42 +5,43 @@
  */
 "use strict";
 
-// Enable server to run on port selected by the user selected
-// environment variable DBWEBB_PORT
 const port = process.env.DBWEBB_PORT || 1337;
-
-// Set upp Express server
 const express = require("express");
 const app = express();
+const path = require("path");
+const routeIndex = require("./route/index.js");
+const routeLotto = require("./route/lotto.js");
+const middleware = require("./middleware/index.js");
 
-// This is middleware called for all routes.
-// Middleware takes three parameters.
-// Its callback ends with a call to next() to proceed to the next
-// middleware, or the actual route.
-app.use((req, res, next) => {
-    console.info(`Got request on ${req.path} (${req.method}).`);
-    next();
-});
+app.set("use views", "ejs");
 
-// Add a route for the path /
-app.get("/", (req, res) => {
-    res.send("Hello Ninja!");
-});
+app.use(middleware.incomingToConsole);
+app.use(express.static(path.join(__dirname,"public")));
+app.use("/", routeIndex);
+app.use("/lotto", routeLotto)
+app.listen(port, logStartUpDetailsToConsole);
 
-// Add a route for the path /about
-app.get("/about", (req, res) => {
-    res.send("About something");
-});
 
-// Start up server and begin listen to requests
-app.listen(port, () => {
-    console.info(`Server is listening on port ${port}.`);
 
-    // Show which routes are supported
-    console.info("Available routes are:");
-    app._router.stack.forEach((r) => {
-        if (r.route && r.route.path) {
-            console.info(r.route.path);
+function logStartUpDetailsToConsole() {
+    let routes = [];
+
+    app._router.stack.forEach((middleware) => {
+        if (middleware.route) {
+            routes.push(middleware.route);
+
+        } else if (middleware.name === "router") {
+
+            middleware.handle.stack.forEach((handler) => {
+                let route;
+
+                route = handler.route;
+                route && routes.push(route);
+            });
         }
     });
-});
+
+    console.info(`Server is listening on port ${port}.`);
+    console.info("Available routes are:");
+    console.info(routes);
+}
