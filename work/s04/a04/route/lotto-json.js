@@ -4,7 +4,7 @@
 var express = require("express");
 var router = express.Router();
 
-router.get("/", (req,res) => {
+router.get("/", (req,res) =>{
     let LottoBall = require("./lottoBall");
     let lottoDraw = [];
 
@@ -14,11 +14,8 @@ router.get("/", (req,res) => {
          console.info("Ball "+ [i+1] + " is the number = " + lottoDraw[i]);
 
     }
-     res.send("Your Lotto numbers: "+ lottoDraw.toString());
-    //   res.json({row :[lottoDraw.toString()]});
+     res.json({row :[lottoDraw.toString()]});
 
 });
-
-
 
 module.exports = router;

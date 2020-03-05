@@ -11,6 +11,7 @@ const app = express();
 const path = require("path");
 const routeIndex = require("./route/index.js");
 const routeLotto = require("./route/lotto.js");
+const routeLottoJson = require("./route/lotto-json.js");
 const middleware = require("./middleware/index.js");
 
 app.set("use views", "ejs");
@@ -18,7 +19,8 @@ app.set("use views", "ejs");
 app.use(middleware.incomingToConsole);
 app.use(express.static(path.join(__dirname,"public")));
 app.use("/", routeIndex);
-app.use("/lotto", routeLotto)
+app.use("/lotto", routeLotto);
+app.use("/lotto-json", routeLottoJson);
 app.listen(port, logStartUpDetailsToConsole);
 
 
