@@ -6,7 +6,7 @@ require "config.php";
 require "src/functions.php";
 
 // Get incoming values
-$search = $_GET["search"] ?? null;s
+$search = $_GET["search"] ?? null;
 $like = "%$search%";
 //var_dump($_GET);
 
