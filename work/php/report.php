@@ -1,26 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Report from the course sections</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="favicon.ico">
-</head>
-
-<body>
-
-
-
-<header>
-    <nav class="navvv">
-        <a href="me.html">Me</a> |
-        <a href="report.html">Report</a> | 
-        <a href="about.html">About</a>  |
-        <a href="schools.html">Schools</a>
-    </nav class="navvv" >
-</header>
-
-
+<?php
+require __DIR__."/view/header.php";
+?>
 
 <article>
 
@@ -140,15 +120,15 @@
 <p>Here is the text for this section.</p>
 </section>
 
-<footer>
-    <hr>
-    <p>Provide a nice footer to your report.</p>
-</footer>
+<?php
+require __DIR__."/view/footer.php";
+?>
+
+
 
 </article>
 
 
-<div id="duck" class="duck"></div>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/duck.js" ></script>
 </body>

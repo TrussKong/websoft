@@ -1,26 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Presentation of my self in the course Software Development for the Web</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="favicon.ico">
-</head>
-
-<body>
-
-<!--
-Comments are written as HTML style.
--->
-
-
-<header>
-    <nav class="navvv">
-        <a href="me.html">Me</a> |
-        <a href="report.html">Report</a> | 
-        <a href="about.html">About</a> |
-        <a href="schools.html">Schools</a>
-    </nav>
+<?php
+require __DIR__."/view/header.php";
+?>
 </header>
 
 
@@ -43,13 +23,10 @@ Comments are written as HTML style.
 
 </article>
 
-<footer style="background-color: yellow;" boarder: yellow solid 5px;   >
-    <hr>
-    <p>Disclaimer, person in the image may not resemble actual person in real life. Image may have been photoshopped in order to look appealing to the visual eyes. </p>
-    <p>Contact information: Daniel.kongdet@gmail.com</p>
-</footer>
+<?php
+require __DIR__."/view/footer.php";
+?>
 
-<div id="duck" class="duck"></div>
     
 
 <script type="text/javascript" src="js/main.js"></script>

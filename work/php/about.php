@@ -1,27 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>About this site</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="favicon.ico">
-</head>
-
-<body>
-
-
-
-<header>
-    <nav class="navvv">
-        <a href="me.html">Me</a> |
-        <a href="report.html">Report</a> | 
-        <a href="about.html">About</a> |
-        <a href="schools.html">Schools</a>
-    </nav class="navvv">
-</header>
-
-
-
+<?php
+require __DIR__."/view/header.php";
+?>
 <article>
 
 <h1>About</h1>
@@ -40,12 +19,10 @@
 
 </article>
 
-<footer>
-    <hr>
-    <p>2020 Daniel Kongdet, Contact: Daniel.kongdet@gmail.com</p>
-</footer>
+<?php
+require __DIR__."/view/footer.php";
+?>
 
-<div id="duck" class="duck"></div>
 
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/duck.js" ></script>
