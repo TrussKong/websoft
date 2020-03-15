@@ -79,7 +79,7 @@ namespace bank
         }
         static IEnumerable<Account> ReadAccounts()
         {
-            String file = "../account.json";
+            String file = "../data/account.json";
 
             using (StreamReader r = new StreamReader(file))
             {
