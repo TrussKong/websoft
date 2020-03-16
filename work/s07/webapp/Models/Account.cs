@@ -13,8 +13,8 @@ namespace webapp.Models
             public string Label { get; set; }
             public int Owner { get; set; }
             
-            public override string ToString() =>
-                 JsonSerializer.Serialize<Account>(this);
-            
+            public override string ToString() {
+                return JsonSerializer.Serialize<Account>(this);
+            }
     }
 }

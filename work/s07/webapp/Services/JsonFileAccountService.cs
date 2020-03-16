@@ -5,6 +5,8 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Hosting;
 using webapp.Models;
+using webapp.Controllers;
+using webapp.Pages;
 
 namespace webapp.Services
 {
@@ -19,7 +21,7 @@ namespace webapp.Services
 
         private string JsonFileName
         {
-            get{return Path.Combine(WebHostEnvironment.ContentRootPath, "..",
+            get{return Path.Combine(WebHostEnvironment.ContentRootPath, 
             "data", "account.json"); }
         }
         public IEnumerable<Account> GetAccounts()
