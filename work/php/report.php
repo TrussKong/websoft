@@ -109,7 +109,16 @@ require __DIR__."/view/header.php";
 
 <section>
 <h2>S08</h2>
-<p>Here is the text for this section.</p>
+<p class="reportPara">I was the only person to partake in writing the assignment of analyse performance of websites. The websites I have chosen to analyze are 3 of the same type of websites. The website are all News sites one being ESPN sports news, TechCrunch Tech news, and CNN Global news websites. While using google chrome using both built in dev-tools such as, lighthouse and network tab. First site I analyzed was espn using the network tab. The read I saw was 156 requests, 3.7 MB transferred, 12.8 MB resource, finished 1.6 min, DOMContentloaded 7.34s, and load: 22.11s. The biggest files I would observe were xhr files, in which area is an API known as XMLhttpRequest. The time was recorded at 878 ms and another at 882. However they were the slowest but the file sizes differed aas one was 872 B and the other was 91 KB. Next analysis was done with lighthouse and I discovered surprisingly how terrible the performance score at 3 it had. ESPN passed 10 audits. I would have thought it would be really good as ESPN is one of the top sports new sites in the world. The biggest suggestions are to Properly size images that would save them 12.43 s. Followed by eliminating render-blocking resources at 2.36. That is a huge discrepancy between the two. Third party code is hurting performance and should reduce that. Their SEO scored that highest at 91. Next I analyzed CNN news. The first and most notable analysis was the finish time compared to ESPN was 1.6 min to CNN’s 32.7 min. Another site that performance was low and I was surprised by that as well even worse than ESPN at 0. The opportunities that were suggested were preload key requests that would save 10.14 s. Followed by preconnect to required origins. CNN passed 12 audits compared to ESPN 10 audits. Both accessibility and best practices scored higher than ESPN but not by much. But search engine ranking SEO was just as high as ESPN at 91 points. Lastly I analysed TechCrunch the tech new site. The most notable thing in the network tab was it had about 30% less request than ESPN and CNN. The performance to all the sites were bad TechCrunch scored a 3 making CNN the worst of the 3. Some of the opportunities suggested were to eliminate render-blocking resources the same as ESPN. Also Reduce JavaScript execution time at 26.6. The passed 12 audits same as CNN.  After final inspection TechCrunch seem to have the best all around score which comes at a shocking surprise. With having the lowest request and best performing times in most categories. 
+
+
+</p>
+<div>
+    <img src="img/WebAnalysis.png" alt="">
+    <p>
+        <a href="https://docs.google.com/spreadsheets/d/1yylU5gbgOf5PP4tt0WQkgrBh4_dY6hIyfPXt0mj6vnM/edit?usp=sharing">Click here to see Google Sheets</a>
+    </p>
+</div>
 </section>
 
 <section>
