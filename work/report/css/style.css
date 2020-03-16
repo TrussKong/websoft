@@ -100,3 +100,23 @@ a:hover{
     border: yellow solid 2px;
 
 }
+
+.collapsible{
+    cursor: pointer;
+    padding: 3px;
+    text-align: left;
+    background-color: rgb(198, 156, 233);
+    width: 45pc;
+    border: none;
+}
+
+.content{
+    padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: rgb(198, 156, 233);
+}
+
+.active, .collapsible:hover{
+    background-color: yellow;
+}
