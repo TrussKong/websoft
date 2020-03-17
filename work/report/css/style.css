@@ -119,4 +119,10 @@ a:hover{
 
 .active, .collapsible:hover{
     background-color: yellow;
+
+}
+.collapsible:active{
+    background-color: aliceblue;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
