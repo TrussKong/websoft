@@ -60,17 +60,20 @@ namespace webapp
                  endpoints.MapRazorPages();
 
 
-            //         endpoints.MapGet("/accounts", (context) => {
-            //         var accounts = 
-            //         app.ApplicationServices.GetService<JsonFileAccountService>()
-            //         .GetAccounts();
-            //         var json = JsonSerializer.Serialize<IEnumerable<Account>>(accounts);
-            //         return context.Reponse.WriteAsync(json);
-            // });
+                    endpoints.MapGet("/accounts", (context) => {
+                    var accounts = 
+                    app.ApplicationServices.GetService<JsonFileAccountService>()
+                    .GetAccounts();
+                    var json = JsonSerializer.Serialize<IEnumerable<Account>>(accounts);
+                    return context.Reponse.WriteAsync(json);
+            });
 
             endpoints.MapControllers();
 
             });
+        }
+        public abstract class HttpResponse{
+
         }
     } 
 }
